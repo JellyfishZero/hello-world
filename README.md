@@ -3,7 +3,7 @@
 
 /*
 Hi! I have created the "hello world". And then, I want to introduce myself.
-I'm a National Pingtung University (Taiwan) studnet, and I major in "Imformation management".
+I'm a National Pingtung University (Taiwan) studnet, and I major in "Imformation Management".
 My coding experience isn't long, just one year. 
 During a year, I learn "C" first, and C#, C++. Recently, I start to leran java.
 My English ability isnot very well, but I hope I can learn much new knowledge on this web.
