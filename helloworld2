@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+class Circle {
+private:
+	double r;
+	double area;
+	const double pi = 3.14;
+public:
+	Circle() {
+		r = 1;
+		area = r*r*pi;
+	}
+	Circle(double getR) : r(getR){
+		area = r*r*pi;
+	}
+	Circle & Circle::operator=(const Circle & getCircle) {
+		r = getCircle.r;
+		area = getCircle.area;
+		return * this;
+	}
+	Circle Circle::operator+(Circle getCircle) {
+		double totalArea = area + getCircle.area;
+		double newR = totalArea / pi;
+		Circle newCircle(newR);
+		return newCircle;
+	}
+	double getArea() {
+		return area;
+	}
+	double getr() {
+		return r;
+	}
+};
+
+int main() {
+	double r1, r2;
+	cout << "請輸入兩個半徑:" << endl;
+	cout << "Bismarck.r=";
+	cin >> r1;
+	cout << "Evelynn.r=";
+	cin >> r2;
+	Circle Bismarck(r1), Evelynn(r2), Camilla;
+	cout << "Bismarck.area = " << Bismarck.getArea() << endl;
+	cout << "Evelynn.area = " << Evelynn.getArea() << endl;
+
+	cout << endl;
+
+	cout << "Camilla = Bismarck + Evelynn" << endl;
+	Camilla = (Bismarck + Evelynn);
+	
+	cout << "Camilla.r = " << Camilla.getr() << endl;
+	cout << "Camilla.area = " << Camilla.getArea() << endl;
+
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
